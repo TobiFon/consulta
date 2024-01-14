@@ -59,7 +59,7 @@ export function RadioGroupForm() {
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="grid xl:grid-cols-2 space-y-1 xl:gap-5"
+                  className="grid xl:grid-cols-2 space-y-1 gap-10"
                 >
                   <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>
