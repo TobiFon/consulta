@@ -15,33 +15,39 @@ const NavBar = () => {
     { name: "Articles", href: "articles" },
   ];
   return (
-    <div className="flex justify-between items-center h-[7vh] border-b-2 border-purple-950 px-5 lg:px-10 bg-orange-50 z-10">
-      <div className="relative">Consulta</div>
-      <div className="xl:flex gap-4 hidden ">
-        {navLinks.map((link, index) => (
-          <Link key={index} href={link.href}>
-            {link.name}
-          </Link>
-        ))}
-      </div>
-      <div className="xl:flex gap-6 justify-center items-center hidden">
-        <div className="flex flex-col gap-1 ">
-          <small className="text-sm font-medium leading-none">Call Now</small>
-          <small className="text-sm font-medium leading-none">
-            (+237)-675555555
-          </small>
+    <div className=" bg-orange-50">
+      <div className="flex justify-between items-center h-[7vh] border-b-2 border-purple-950 px-5 lg:px-10 container z-10">
+        <div className="relative">Consulta</div>
+        <div className="xl:flex gap-4 hidden ">
+          {navLinks.map((link, index) => (
+            <Link key={index} href={link.href}>
+              {link.name}
+            </Link>
+          ))}
         </div>
-        <Button className=" bg-purple-950 text-orange-200 p-5">
-          {" "}
-          Send a Message
-        </Button>
+        <div className="xl:flex gap-6 justify-center items-center hidden">
+          <div className="flex flex-col gap-1 ">
+            <small className="text-sm font-medium leading-none">Call Now</small>
+            <small className="text-sm font-medium leading-none">
+              (+237)-675555555
+            </small>
+          </div>
+          <Button className=" bg-purple-950 text-orange-200 p-5">
+            {" "}
+            Send a Message
+          </Button>
+        </div>
+        <div className="xl:hidden">
+          <Button
+            className=""
+            variant={"ghost"}
+            onClick={() => setIsOpen(true)}
+          >
+            <Menu />
+          </Button>
+        </div>
+        {isOpen && <SideBar setIsOpen={setIsOpen} />}
       </div>
-      <div className="xl:hidden">
-        <Button className="" variant={"ghost"} onClick={() => setIsOpen(true)}>
-          <Menu />
-        </Button>
-      </div>
-      {isOpen && <SideBar setIsOpen={setIsOpen} />}
     </div>
   );
 };

@@ -46,7 +46,10 @@ export function RadioGroupForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-10">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-2/3 space-y-10 flex flex-col items-center justify-center"
+      >
         <FormField
           control={form.control}
           name="type"
@@ -56,7 +59,7 @@ export function RadioGroupForm() {
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="grid lg:grid-cols-2 space-y-1 lg:gap-5"
+                  className="grid xl:grid-cols-2 space-y-1 xl:gap-5"
                 >
                   <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>

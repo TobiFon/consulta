@@ -16,7 +16,7 @@ const SideBar = ({ setIsOpen }: StateProps) => {
     { name: "Articles", href: "articles" },
   ];
   return (
-    <div className=" w-full right-0 left-0 h-screen fixed top-0 bottom-0 bg-purple-950 text-orange-200 z-50">
+    <div className=" w-full right-0 left-0 h-full fixed top-0 bottom-0  bg-purple-950 text-orange-200 z-50">
       <Button
         className=" text-orange-200 fixed top-4 right-6"
         variant={"ghost"}

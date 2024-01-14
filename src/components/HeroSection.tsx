@@ -16,7 +16,7 @@ const HeroSection = () => {
             end-to-end encrypted video call
           </p>
 
-          <div className="flex gap-1 md:gap-5 items-center justify-center lg:justify-start flex-row ">
+          <div className="flex gap-3 md:gap-5 items-center justify-center lg:justify-start flex-row ">
             <Button className=" shadow-md">Ask A Doctor Online</Button>
             <Button className=" shadow-md" variant={"secondary"}>
               Unlimited Chat

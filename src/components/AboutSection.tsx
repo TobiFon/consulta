@@ -31,7 +31,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <div className=" w-full flex flex-col items-center justify-center my-10 space-y-10 ">
+    <div className=" w-full flex flex-col items-center justify-center my-10 space-y-10 text-center">
       <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
         Why you should trust us? <br />
         Get to know about us
